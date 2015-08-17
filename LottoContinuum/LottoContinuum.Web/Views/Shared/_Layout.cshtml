@@ -10,13 +10,47 @@
     </head>
     <body>
         <header>
-            
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="jumbotron" id="site-header">
+                        <h2>LottoContinuum</h2>
+                    </div>
+                </div>
+            </div>
         </header>
+        <nav>
+            <div class="row">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                                <a href="/" class="btn btn-primary">Home</a>
+                                <a href="/" class="btn btn-primary">Button One</a>
+                                <a href="/" class="btn btn-primary">Button Two</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="row" id="body-content">
+            <div class="container">
                 @RenderBody()
+            </div>
+        </div>
         <footer>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="jumbotron" id="site-footer">
+                        
+                    </div>
+                </div>
+            </div>
         </footer>
 
         @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @Scripts.Render("~/bundles/lc-js")
         @RenderSection("scripts", required: false)
     </body>
 </html>
