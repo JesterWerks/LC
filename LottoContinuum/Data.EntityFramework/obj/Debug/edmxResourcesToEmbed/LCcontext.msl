@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LottoContinuumModelStoreContainer" CdmEntityContainer="LottoContinuumEntities">
+    <EntitySetMapping Name="Drawings">
+      <EntityTypeMapping TypeName="LottoContinuumModel.Drawing">
+        <MappingFragment StoreEntitySet="Drawings">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Game_Id" ColumnName="Game_Id" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Game_Days">
+      <EntityTypeMapping TypeName="LottoContinuumModel.Game_Days">
+        <MappingFragment StoreEntitySet="Game_Days">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Game_Id" ColumnName="Game_Id" />
+          <ScalarProperty Name="Day" ColumnName="Day" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Games">
+      <EntityTypeMapping TypeName="LottoContinuumModel.Game">
+        <MappingFragment StoreEntitySet="Games">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Game_Balls" ColumnName="Game_Balls" />
+          <ScalarProperty Name="Bottom_Game_Ball" ColumnName="Bottom_Game_Ball" />
+          <ScalarProperty Name="Top_Game_Ball" ColumnName="Top_Game_Ball" />
+          <ScalarProperty Name="Bonus_Balls" ColumnName="Bonus_Balls" />
+          <ScalarProperty Name="Bottom_Bonus_Ball" ColumnName="Bottom_Bonus_Ball" />
+          <ScalarProperty Name="Top_Bonus_Ball" ColumnName="Top_Bonus_Ball" />
+          <ScalarProperty Name="Site_Url" ColumnName="Site_Url" />
+          <ScalarProperty Name="Permutations" ColumnName="Permutations" />
+          <ScalarProperty Name="Drawing_Time" ColumnName="Drawing_Time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Games_States">
+      <EntityTypeMapping TypeName="LottoContinuumModel.Games_States">
+        <MappingFragment StoreEntitySet="Games_States">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Game_Id" ColumnName="Game_Id" />
+          <ScalarProperty Name="State_Id" ColumnName="State_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="States">
+      <EntityTypeMapping TypeName="LottoContinuumModel.State">
+        <MappingFragment StoreEntitySet="States">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Abbreviation" ColumnName="Abbreviation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

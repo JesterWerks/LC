@@ -1,0 +1,12 @@
+C:\Skip Stuff\GitHub\LC\LottoContinuum\LottoContinuum.Domain\bin\Debug\LottoContinuum.Domain.dll.config
+C:\Skip Stuff\GitHub\LC\LottoContinuum\LottoContinuum.Domain\bin\Debug\LottoContinuum.Domain.dll
+C:\Skip Stuff\GitHub\LC\LottoContinuum\LottoContinuum.Domain\bin\Debug\LottoContinuum.Domain.pdb
+C:\Skip Stuff\GitHub\LC\LottoContinuum\LottoContinuum.Domain\bin\Debug\Data.EntityFramework.dll
+C:\Skip Stuff\GitHub\LC\LottoContinuum\LottoContinuum.Domain\bin\Debug\EntityFramework.dll
+C:\Skip Stuff\GitHub\LC\LottoContinuum\LottoContinuum.Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Skip Stuff\GitHub\LC\LottoContinuum\LottoContinuum.Domain\bin\Debug\Data.EntityFramework.pdb
+C:\Skip Stuff\GitHub\LC\LottoContinuum\LottoContinuum.Domain\bin\Debug\EntityFramework.xml
+C:\Skip Stuff\GitHub\LC\LottoContinuum\LottoContinuum.Domain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Skip Stuff\GitHub\LC\LottoContinuum\LottoContinuum.Domain\obj\Debug\LottoContinuum.Domain.csprojResolveAssemblyReference.cache
+C:\Skip Stuff\GitHub\LC\LottoContinuum\LottoContinuum.Domain\obj\Debug\LottoContinuum.Domain.dll
+C:\Skip Stuff\GitHub\LC\LottoContinuum\LottoContinuum.Domain\obj\Debug\LottoContinuum.Domain.pdb

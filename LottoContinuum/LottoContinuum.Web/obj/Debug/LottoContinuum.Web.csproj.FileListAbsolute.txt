@@ -83,3 +83,9 @@ C:\Skip Stuff\GitHub\LC\LottoContinuum\LottoContinuum.Web\bin\zh-Hant\System.Spa
 C:\Skip Stuff\GitHub\LC\LottoContinuum\LottoContinuum.Web\obj\Debug\LottoContinuum.Web.csprojResolveAssemblyReference.cache
 C:\Skip Stuff\GitHub\LC\LottoContinuum\LottoContinuum.Web\obj\Debug\LottoContinuum.Web.dll
 C:\Skip Stuff\GitHub\LC\LottoContinuum\LottoContinuum.Web\obj\Debug\LottoContinuum.Web.pdb
+C:\Skip Stuff\GitHub\LC\LottoContinuum\LottoContinuum.Web\bin\Data.EntityFramework.dll
+C:\Skip Stuff\GitHub\LC\LottoContinuum\LottoContinuum.Web\bin\EntityFramework.SqlServer.dll
+C:\Skip Stuff\GitHub\LC\LottoContinuum\LottoContinuum.Web\bin\LottoContinuum.Domain.dll
+C:\Skip Stuff\GitHub\LC\LottoContinuum\LottoContinuum.Web\bin\Data.EntityFramework.pdb
+C:\Skip Stuff\GitHub\LC\LottoContinuum\LottoContinuum.Web\bin\LottoContinuum.Domain.pdb
+C:\Skip Stuff\GitHub\LC\LottoContinuum\LottoContinuum.Web\bin\EntityFramework.SqlServer.xml
