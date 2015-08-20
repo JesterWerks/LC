@@ -12,9 +12,7 @@ namespace LottoContinuum.Web.Controllers
         // GET: /Games/
 
         public ActionResult Index()
-        {
-            // id = null returns all games index
-            
+        {           
             return View();
         }
 

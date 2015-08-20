@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3b953fb9a56841b1852492f05f524765" Name="Diagram1">
+        <EntityTypeShape EntityType="LottoContinuumModel.Drawing" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LottoContinuumModel.Game_Days" Width="1.5" PointX="3" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LottoContinuumModel.Game" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LottoContinuumModel.Games_States" Width="1.5" PointX="6" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LottoContinuumModel.State" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="LottoContinuumModel.FK_Drawings_Games" ManuallyRouted="false" />
+        <AssociationConnector Association="LottoContinuumModel.FK_Game_Days_Games" ManuallyRouted="false" />
+        <AssociationConnector Association="LottoContinuumModel.FK_Games_States_Games" ManuallyRouted="false" />
+        <AssociationConnector Association="LottoContinuumModel.FK_Games_States_States" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

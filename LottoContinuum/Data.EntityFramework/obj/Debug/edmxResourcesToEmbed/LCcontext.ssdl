@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LottoContinuumModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="LottoContinuumModelStoreContainer">
+    <EntitySet Name="Drawings" EntityType="LottoContinuumModel.Store.Drawings" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Game_Days" EntityType="LottoContinuumModel.Store.Game_Days" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Games" EntityType="LottoContinuumModel.Store.Games" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Games_States" EntityType="LottoContinuumModel.Store.Games_States" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="States" EntityType="LottoContinuumModel.Store.States" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Drawings_Games" Association="LottoContinuumModel.Store.FK_Drawings_Games">
+      <End Role="Games" EntitySet="Games" />
+      <End Role="Drawings" EntitySet="Drawings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Game_Days_Games" Association="LottoContinuumModel.Store.FK_Game_Days_Games">
+      <End Role="Games" EntitySet="Games" />
+      <End Role="Game_Days" EntitySet="Game_Days" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Games_States_Games" Association="LottoContinuumModel.Store.FK_Games_States_Games">
+      <End Role="Games" EntitySet="Games" />
+      <End Role="Games_States" EntitySet="Games_States" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Games_States_States" Association="LottoContinuumModel.Store.FK_Games_States_States">
+      <End Role="States" EntitySet="States" />
+      <End Role="Games_States" EntitySet="Games_States" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Drawings">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Game_Id" Type="int" />
+    <Property Name="Date" Type="smalldatetime" />
+  </EntityType>
+  <EntityType Name="Game_Days">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Game_Id" Type="int" Nullable="false" />
+    <Property Name="Day" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Games">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Game_Balls" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Bottom_Game_Ball" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Top_Game_Ball" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Bonus_Balls" Type="varchar" MaxLength="50" />
+    <Property Name="Bottom_Bonus_Ball" Type="varchar" MaxLength="50" />
+    <Property Name="Top_Bonus_Ball" Type="varchar" MaxLength="50" />
+    <Property Name="Site_Url" Type="varchar" MaxLength="50" />
+    <Property Name="Permutations" Type="varchar" MaxLength="50" />
+    <Property Name="Drawing_Time" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Games_States">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Game_Id" Type="int" Nullable="false" />
+    <Property Name="State_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="States">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Abbreviation" Type="nvarchar" Nullable="false" MaxLength="2" />
+  </EntityType>
+  <Association Name="FK_Drawings_Games">
+    <End Role="Games" Type="LottoContinuumModel.Store.Games" Multiplicity="0..1" />
+    <End Role="Drawings" Type="LottoContinuumModel.Store.Drawings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Games">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Drawings">
+        <PropertyRef Name="Game_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Game_Days_Games">
+    <End Role="Games" Type="LottoContinuumModel.Store.Games" Multiplicity="1" />
+    <End Role="Game_Days" Type="LottoContinuumModel.Store.Game_Days" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Games">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Game_Days">
+        <PropertyRef Name="Game_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Games_States_Games">
+    <End Role="Games" Type="LottoContinuumModel.Store.Games" Multiplicity="1" />
+    <End Role="Games_States" Type="LottoContinuumModel.Store.Games_States" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Games">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Games_States">
+        <PropertyRef Name="Game_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Games_States_States">
+    <End Role="States" Type="LottoContinuumModel.Store.States" Multiplicity="1" />
+    <End Role="Games_States" Type="LottoContinuumModel.Store.Games_States" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="States">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Games_States">
+        <PropertyRef Name="State_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
